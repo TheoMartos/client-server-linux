@@ -23,12 +23,6 @@ class SocketLinux: public ISocket
 {
 private:
 	/**
-	 * Contains the number of SocketLinux created instances
-	 */
-	static int instances;
-
-public:
-	/**
 	 * Opened Linux socket
 	 */
 	SOCKET _socket;

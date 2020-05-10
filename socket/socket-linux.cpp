@@ -1,8 +1,6 @@
 #include "socket-linux.hpp"
 #include <sstream>
 
-//Set the default value of the static attribut initialized
-int SocketLinux::instances = 0;
 
 /**
  * Constructor
@@ -10,7 +8,6 @@ int SocketLinux::instances = 0;
 SocketLinux::SocketLinux()
 {
 	_socket = 0;
-	SocketLinux::instances++;
 }
 
 /**
@@ -19,7 +16,6 @@ SocketLinux::SocketLinux()
 SocketLinux::SocketLinux(const SOCKET& sock)
 {
 	SocketLinux();
-
 	_socket = sock;
 }
 
@@ -28,7 +24,6 @@ SocketLinux::SocketLinux(const SOCKET& sock)
   */
 SocketLinux::~SocketLinux()
 {
-	SocketLinux::instances--;
 }
 
 /**
